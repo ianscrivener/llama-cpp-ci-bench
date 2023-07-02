@@ -5,11 +5,10 @@
 
 <br/>
 
-> ---
-> ## ⚠️ **WARNING**
+
+> ### ⚠️ **WARNING**
 > Spinning up GPU virtual machines can get expensive 💰<br/>
 > <i>please proceed carefully...</i> 
-> ___
 
 
 
@@ -38,7 +37,7 @@ ToDo...
 <img src="md_assets/architeture.png" width="75%" height="75%" /><br/><br/>
 
 
-### **conductor VM**
+### **⚙️ conductor VM**
 
 #### Conductor Overview
 - always on small cloud VM (xx)
@@ -61,7 +60,7 @@ ToDo...
 - nvidia-smi metrics
 - cpu, gpu, ram metrics & other machine metrics
 
-### **  bench runner VM**
+### **⚙️ bench runner VM**
 - emphemeral VM
 - Ubuntu, Debian or Windows VM
 - node.js, nvm & PM2
