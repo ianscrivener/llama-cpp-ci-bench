@@ -1,4 +1,4 @@
-![Alt text](md_assets/architeture.png)
+![Alt text](md_assets/header.png)
 <!-- # llama-cpp-ci-bench -->
 
 ***... Continual Integration LLM Benchmarking for llama.cpp***
@@ -18,7 +18,7 @@
 
 ## **Architecture**
 <!-- ![Alt text](md_assets/image.png) -->
-<img src="md_assets/image-1.png" width="75%" height="75%" /><br/><br/>
+<img src="md_assets/architeture.png" width="75%" height="75%" /><br/><br/>
 
 
 ### **conductor VM**
