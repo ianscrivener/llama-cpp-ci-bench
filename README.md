@@ -1,11 +1,26 @@
 ![Alt text](md_assets/header.png)
 <!-- # llama-cpp-ci-bench -->
 
-***... Continual Integration LLM Benchmarking for llama.cpp***
+### *... Continual integration benchmarking for LLM inference engine **[llama.cpp](https://github.com/ggerganov/llama.cpp)***
+
+<br/>
+
+> ---
+> ## ⚠️ **WARNING**
+> Spinning up GPU virtual machines can get expensive 💰<br/>
+> <i>please proceed carefully...</i> 
+> ___
+
+
+
+
+<br/>
 
 ## **About**
+ToDo...
 
 
+<br/>
 
 ## **Tech Stack**
 - **Azure cloud by Microsoft** - we are targeting MS Azure exclusively (at this point)
@@ -15,6 +30,8 @@
 - **Telegraf** - gathers various Benchmark VM metric and sends them to InfluxDb
 - **CouchDB** - robust & simple noSQL database 
 
+
+<br/>
 
 ## **Architecture**
 <!-- ![Alt text](md_assets/image.png) -->
@@ -31,21 +48,20 @@
 - InfluxDB for logs & telemetry
 - CouchDB for config & bench result summaries
 
-#### Conductor Functionality
+#### **Conductor Functionality**
 1. **polls** Gituhb API periodically for latest llama.cpp release
 1. instruct Azure to create a GPU VM using `az` CLI commands
-1.   
 
-#### Config database - CouchDB
+#### **Config database - CouchDB**
 - bench test data
 - Azure machine image data
 
-#### Logging Database - InfluxDB
+#### **Logging Database - InfluxDB**
 - llama.cpp stdout stream with timestamps
 - nvidia-smi metrics
 - cpu, gpu, ram metrics & other machine metrics
 
-### **bench runner**
+### **  bench runner VM**
 - emphemeral VM
 - Ubuntu, Debian or Windows VM
 - node.js, nvm & PM2
@@ -55,10 +71,13 @@
 
 
 
----
-## **Warning**
 
 
+
 ---
+
+<br/>
+
 ## **Setup**
 
+ToDO
