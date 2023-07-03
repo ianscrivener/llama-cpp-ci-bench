@@ -39,6 +39,12 @@ ToDo...
 <!-- ![Alt text](md_assets/image.png) -->
 <img src="md_assets/architeture-v4.png" width="75%" height="75%" /><br/><br/>
 
+> ### ❗️ **Tests Results Export**
+> Test results are collated and pushed to **[llama.cpp GitHub repo](https://github.com/ggerganov/llama.cpp)**  after each CI benchmarking run.
+
+<br/>
+
+
 
 
 ### **⚙️conductor VM**
@@ -54,6 +60,7 @@ ToDo...
 #### **⚙️conductor Functionality**
 1. **polls** Gituhb API periodically for latest llama.cpp release
 1. instructs Azure to create a GPU VM (⚙️bench-runner) and configures infrastructure etc `az` CLI commands
+1. ***exports test result extracts and commits them to llama.cpp Github repo***
 
 
 #### **Config database - CouchDB**
