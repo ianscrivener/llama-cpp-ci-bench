@@ -39,10 +39,10 @@ ToDo...
 
 ### **⚙️ conductor VM**
 
-#### Conductor Overview
+#### **Conductor Overview**
 - always on small cloud VM (xx)
 - Ubuntu 22.04
-- node.js * nvm
+- node.js & nvm
 - PM2 to manage cron & processes
 - InfluxDB for logs & telemetry
 - CouchDB for config & bench result summaries
@@ -60,15 +60,29 @@ ToDo...
 - nvidia-smi metrics
 - cpu, gpu, ram metrics & other machine metrics
 
+<br/>
+
 ### **⚙️ bench runner VM**
+
+#### **bench runner overview**
 - emphemeral VM
 - Ubuntu, Debian or Windows VM
 - node.js, nvm & PM2
 - nvidia drivers etc
-- Telegraf (for machine & nvidia telemtry)
+- Telegraf (for machine & nvidia telemetry)
 
+#### **bench runner functionality**
+node.js runs a managed node.js sub-process;
+1. node.js pulls git code - eg `git pull master-d7d2e6a`
+1. node.s builds the code - eg `make clean && make -j`
+1. node.js runs **[llama.cpp](https://github.com/ggerganov/llama.cpp)** - eg `time ./perplexity -m ./models/3B/open-llama-3b-q4_0.bin -f build/wiki.test.raw.406 -t 8` 
+1. node.js sends `stdout` to 📂 InfuxDB
+1. node.js sends llama.cpp process results to 📂 CouchDB
 
+1. *[optionally] node.js switches to a different branch - GOTO #1*
 
+1. node.js sends "bench session end" signal to **⚙️ conductor** / 📂 CouchDB / 📂 InfluxDB
+1. node.js shutsdown the VM 
 
 
 
