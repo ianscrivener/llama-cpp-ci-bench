@@ -105,4 +105,10 @@ node.js runs a managed node.js sub-process;
 
 ## **Setup**
 
-ToDO
+---
+
+## To Do
+1. env.sample
+1. az scripts to build ⚙️conductor 
+1. az scripts to get Azure (a) regions (b) sub-regions (c) image-types... 
+
